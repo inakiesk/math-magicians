@@ -1,4 +1,5 @@
 import React from 'react';
+import CalculatorBtn from './CalculatorBtn';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -12,7 +13,14 @@ class Calculator extends React.Component {
     const { display } = this.state;
     return (
       <div className="calculator">
-        { display }
+        <div className="displayScreen">
+          {display}
+        </div>
+        <div className="calcBody">
+          <div className="calcRow">
+            <CalculatorBtn value="Hello World" />
+          </div>
+        </div>
       </div>
     );
   }
