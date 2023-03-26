@@ -68,10 +68,12 @@ body {
   margin-top: 30px;
 }
 
-.errorQuote, .loadingQuote, .apiQuote{
+.errorQuote,
+.loadingQuote,
+.apiQuote {
   width: 400px;
 }
 
-.apiAuthor{
+.apiAuthor {
   margin-top: 10px;
 }
