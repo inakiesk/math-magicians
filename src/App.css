@@ -62,3 +62,16 @@ body {
 .operator {
   background-color: rgb(255, 166, 0);
 }
+
+.apiWrapper {
+  width: 400px;
+  margin-top: 30px;
+}
+
+.errorQuote, .loadingQuote, .apiQuote{
+  width: 400px;
+}
+
+.apiAuthor{
+  margin-top: 10px;
+}

@@ -12,6 +12,7 @@ function ApiQuote() {
         const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=computers', {
           method: 'GET',
           headers: {
+            'Content-Type': 'application/json',
             'X-Api-Key': 'dgGMc62aYreWbt4OKKJqoQ==3uAkLbsKPPXkzpiV',
           },
         });
@@ -27,21 +28,27 @@ function ApiQuote() {
 
   if (hasError) {
     return (
-      <div>Something went wrong!</div>
+      <div className="errorQuote">Something went wrong!</div>
     );
   }
 
   if (isLoading) {
     return (
-      <div>Loading...</div>
+      <div className="loadingQuote">Loading...</div>
     );
   }
 
   return (
-    <div>
-      &quot;
-      { data[0].quote }
-      &quot;
+    <div className="apiWrapper">
+      <div className="apiQuote">
+        &quot;
+        {data[0].quote}
+        &quot;
+      </div>
+      <div className="apiAuthor">
+        -
+        {data[0].author}
+      </div>
     </div>
   );
 }
